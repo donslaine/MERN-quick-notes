@@ -7,7 +7,8 @@ const noteSchema = new Schema({
         required: true
     },
     user: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required: true
     },
 },
