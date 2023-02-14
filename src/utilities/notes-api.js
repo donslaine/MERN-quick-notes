@@ -1,4 +1,4 @@
-const BASE_URL = '/'
+const BASE_URL = '/api/notes'
 
 export default async function sendRequest(url, method='GET', payload=null) {
     const options = { method }
@@ -23,6 +23,6 @@ export default async function sendRequest(url, method='GET', payload=null) {
     }
 }
 
-export async function createNote() {
-
+export async function createNote(note) {
+    return sendRequest(BASE_URL + '/new', 'POST', note)
 }

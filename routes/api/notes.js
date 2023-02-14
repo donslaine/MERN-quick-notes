@@ -6,7 +6,6 @@ const notesCtrl = require('../../controllers/api/notes')
 
 // localhost:3000/api/note
 // app.use('/api/notes')
-router.post('/', notesCtrl.create)
-
+router.post('/new', notesCtrl.create)
 
 module.exports = router
